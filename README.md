@@ -1,36 +1,10 @@
-# Rsbuild project
+# Repro of bundle analyzer in RSBuild
 
-## Setup
+How to run it:
+`npm run build:analyze` should display the webpack bundle analyzer analysis in the browser
 
-Install the dependencies:
+RSBuild v2 doesn't open empty analysis (no data in it) "No bundles were parsed. Analyzer will show only original module sizes from stats file." in the terminal
 
-```bash
-npm install
-```
+https://rsbuild.rs/guide/upgrade/v1-to-v2#remove-performancebundleanalyze
 
-## Get started
-
-Start the dev server, and the app will be available at [http://localhost:3000](http://localhost:3000).
-
-```bash
-npm run dev
-```
-
-Build the app for production:
-
-```bash
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Learn more
-
-To learn more about Rsbuild, check out the following resources:
-
-- [Rsbuild documentation](https://rsbuild.rs) - explore Rsbuild features and APIs.
-- [Rsbuild GitHub repository](https://github.com/web-infra-dev/rsbuild) - your feedback and contributions are welcome!
+RSBuild v1 open analysis but you cannot change the tabs in the side panel to gzipped/parsed.
